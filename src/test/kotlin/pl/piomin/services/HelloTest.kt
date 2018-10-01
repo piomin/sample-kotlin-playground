@@ -8,7 +8,7 @@ import kotlin.test.assertEquals
 class HelloTest {
 
     @Test
-    fun testPersonData() {
+    fun `Test person equality`() {
         val person = Person("John", "Smith", 1)
         println("$person")
         Assert.assertEquals(1, person.id)
@@ -17,7 +17,7 @@ class HelloTest {
     }
 
     @Test
-    fun testPersonDestructurization() {
+    fun `Test destructurization feature`() {
         val person = Person("John", "Smith", 1)
         val (firstName, lastName) = person
         Assert.assertEquals("John", firstName)
