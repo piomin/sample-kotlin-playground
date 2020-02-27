@@ -7,7 +7,7 @@ import pl.piomin.services.test.model.Person
 
 class OrganizationTest {
 
-    fun Organization.addPerson(person: Person) {
+    private fun Organization.addPerson(person: Person) {
         persons.add(person)
     }
 
