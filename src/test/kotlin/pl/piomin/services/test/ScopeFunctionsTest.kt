@@ -7,7 +7,7 @@ import pl.piomin.services.test.model.Person
 class ScopeFunctionsTest {
 
     @Test fun testApplyFunction() {
-        val p = Person("John", "Smith", 1)
+        val p: Person = Person("John", "Smith", 1)
                 .apply {
                     age = 20
                     localization = "London"
@@ -17,7 +17,7 @@ class ScopeFunctionsTest {
     }
 
     @Test fun testLetFunction() {
-        val p = Person("John", "Smith", 1)
+        val p: Person = Person("John", "Smith", 1)
                 .let {
                     it.age = 20
                     it.localization = "London"
