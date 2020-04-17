@@ -28,7 +28,7 @@ class ScopeFunctionsTest {
     }
 
     @Test fun testRunFunction() {
-        val p = Person("John", "Smith", 1)
+        val p: Person = Person("John", "Smith", 1)
                 .run {
                     age = 20
                     localization = "London"
@@ -39,7 +39,7 @@ class ScopeFunctionsTest {
     }
 
     @Test fun testAlsoFunction() {
-        val p = Person("John", "Smith", 1)
+        val p: Person = Person("John", "Smith", 1)
                 .apply {
                     age = 20
                     localization = "London"
@@ -51,7 +51,7 @@ class ScopeFunctionsTest {
     }
 
     @Test fun testTakeIfFunction() {
-        var p = Person("John", "Smith", 1).takeIf { it.id > 1 }
+        var p: Person? = Person("John", "Smith", 1).takeIf { it.id > 1 }
         Assert.assertNull(p)
         p = Person("John", "Smith", 1).takeIf { it.id == 1 }
         Assert.assertNotNull(p)
