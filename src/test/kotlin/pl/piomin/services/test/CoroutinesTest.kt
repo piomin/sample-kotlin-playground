@@ -25,8 +25,7 @@ class CoroutinesTest {
         var i: Int = 0
         repeat(10) {
             GlobalScope.launch {
-                i++
-                println("$i: ${Thread.currentThread().name}")
+                println("${++i}: ${Thread.currentThread().name}")
             }
         }
         Thread.sleep(100)
@@ -49,8 +48,7 @@ class CoroutinesTest {
         var j: Int = 0
         repeat(10) {
             Thread(Runnable {
-                j++
-                println("$j: ${Thread.currentThread().name}")
+                println("${++j}: ${Thread.currentThread().name}")
             }).start()
         }
         Thread.sleep(100)
