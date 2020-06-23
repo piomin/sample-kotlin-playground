@@ -11,7 +11,7 @@ class CoroutinesTest {
     @Test
     fun testSimpleCoroutineThreadMain() {
         var i: Int = 0
-        for (x in 1..10) {
+        repeat(10) {
             GlobalScope.launch(Dispatchers.Unconfined) {
                 i++
                 println("$i: ${Thread.currentThread().name}")
@@ -47,7 +47,7 @@ class CoroutinesTest {
     @Test
     fun testSimpleThread() {
         var j: Int = 0
-        for (x in 1..10) {
+        repeat(10) {
             Thread(Runnable {
                 j++
                 println("$j: ${Thread.currentThread().name}")
