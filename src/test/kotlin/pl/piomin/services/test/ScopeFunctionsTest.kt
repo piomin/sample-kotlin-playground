@@ -51,7 +51,7 @@ class ScopeFunctionsTest {
     }
 
     @Test fun testTakeIfFunction() {
-        var p: Person? = Person("John", "Smith", 1).takeIf { it.id > 1 }
+        var p: Person? = Person("John", "Smith", 1).takeIf { it.id!! > 1 }
         Assert.assertNull(p)
         p = Person("John", "Smith", 1).takeIf { it.id == 1 }
         Assert.assertNotNull(p)

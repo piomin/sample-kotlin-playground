@@ -5,14 +5,14 @@
 
     <groupId>pl.piomin.services</groupId>
     <artifactId>sample-kotlin-playground</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
 
     <name>pl.piomin.services sample-kotlin-playground</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>1.3.71</kotlin.version>
+        <kotlin.version>1.4.31</kotlin.version>
         <junit.version>4.13.1</junit.version>
     </properties>
 
